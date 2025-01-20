@@ -8,11 +8,13 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
 @Entity
-public class Owner {
+public class Owner {//one->many
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,4 +43,7 @@ public class Owner {
     public void setRegistrationDateAuto(){
         this.registrationDate=LocalDateTime.now();
     }
+
+    @OneToMany(mappedBy = "owner")
+    private List<Book> bookList=new ArrayList<>();
 }

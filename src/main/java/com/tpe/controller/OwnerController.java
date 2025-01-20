@@ -17,16 +17,19 @@ public class OwnerController {
     private final OwnerService ownerService;
 
 
-
-    //2-Find All Owners
-    //http://localhost:8080/owners + GET
+    //2- Find All Owners
+    // http://localhost:8080/owners+GET
     @RequestMapping("/owners")
     @GetMapping
-    public ResponseEntity<List<Owner>>getAllOwners(){
-         List<Owner> owners=ownerService.getAll();
-         return ResponseEntity.ok(owners);
+    public ResponseEntity<List<Owner>> getAllOwners(){
+        List<Owner> owners=ownerService.getAll();
+        return ResponseEntity.ok(owners);
     }
 
-    
+    //1- Save an Owner
+    // http://localhost:8080/owner/save + JSON + POST
+
+    //3- Find an Owner By ID
+    // http://localhost:8080/owner/2 +GET
 
 }

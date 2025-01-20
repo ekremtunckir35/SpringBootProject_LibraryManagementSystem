@@ -62,12 +62,13 @@ public class BookService {
         return bookRepository.findAll(pageable);
     }
 
-    public void updateBook(Long id,BookDTO bookDTO){
-        Book foundBook =getBookById(id);
+    //8-b
+    public void updateBook(Long id, BookDTO bookDTO) {
+        Book foundBook=getBookById(id);
         foundBook.setTitle(bookDTO.getTitle());
         foundBook.setAuthor(bookDTO.getAuthor());
         foundBook.setPublicationDate(bookDTO.getPublicationDate());
-        bookRepository.save(foundBook); // merge:update...set...
+        bookRepository.save(foundBook);//merge: update .. set ..
     }
 
     //9-b
