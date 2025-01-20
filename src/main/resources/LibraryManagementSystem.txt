@@ -19,10 +19,13 @@ LibraryManagementSystem
 
 //8- Update a Book With Using DTO
 // http://localhost:8080/books/update/2
+
 //9- Get a Book By Its Author Using JPQL
 // http://localhost:8080/books/a?author=AB
+
  //10- Add a Book to an Owner
 // http://localhost:8080/books/add?book=3&owner=1
+
 //B-Owner Endpoints
     //1- Save an Owner
     // http://localhost:8080/owners/save + JSON + POST

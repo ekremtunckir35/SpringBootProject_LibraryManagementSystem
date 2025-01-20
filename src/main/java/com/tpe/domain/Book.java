@@ -1,5 +1,6 @@
 package com.tpe.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,6 +36,10 @@ public class Book {
     @Column(nullable = false)
     private String publicationDate;
 
+
+    @ManyToOne//fk ekler
+    @JsonIgnore
+    private Owner owner;
 
 
 
